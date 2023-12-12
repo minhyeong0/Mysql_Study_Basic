@@ -1,0 +1,21 @@
+select count(*) from city where CountryCode = 'KOR';
+select sum(Population), avg(Population) from city where CountryCode = 'KOR';
+select max(Population), min(Population) from city where CountryCode = 'KOR';
+select length(Name) from country;
+select Upper(mid(Name, 1, 3)) from country; 
+select round(LifeExpectancy, 0) from country; 
+select * from city where CountryCode = 'KOR' order by Population limit 10;
+select count(*) from city where CountryCode = 'KOR' order by Population;
+select count(*) from city where CountryCode = 'JPN' order by Population;
+select count(*) from city where CountryCode = 'CHN' order by Population;
+select sum(Population) from city where CountryCode = 'KOR' order by Population;
+select avg(Population) from city where CountryCode = 'KOR' order by Population;
+select max(Population) from city where CountryCode = 'KOR' order by Population;
+select min(Population) from city where CountryCode = 'KOR' order by Population;
+select * from city where Population = 9981619;
+select * from city where Population = 92239;
+select Name, length(Name) from city where CountryCode = 'KOR';
+select Name, length(Name), upper(mid(Name, 1, 3)) from city where CountryCode = 'KOR';
+desc country;
+select round(LifeExpectancy, 0) from country limit 10;
+
