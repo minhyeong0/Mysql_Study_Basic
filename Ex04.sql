@@ -17,5 +17,5 @@ select * from city where Population = 92239;
 select Name, length(Name) from city where CountryCode = 'KOR';
 select Name, length(Name), upper(mid(Name, 1, 3)) from city where CountryCode = 'KOR';
 desc country;
-select round(LifeExpectancy, 0) from country limit 10;
+select Name, round(LifeExpectancy, 0) from country limit 10;
 
