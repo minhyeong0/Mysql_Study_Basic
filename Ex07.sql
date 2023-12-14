@@ -26,4 +26,4 @@ select avg(LifeExpectancy) from country;
 select avg(ifnull(LifeExpectancy, 0)) from country;
 select count(*) from city where CountryCode = 'KOR';
 select CountryCode, count(CountryCode) from city group by CountryCode;
-select CountryCode, count(CountryCode) from city group by CountryCode having 
+select CountryCode, count(CountryCode) from city group by CountryCode having count(CountryCode) > 70;
