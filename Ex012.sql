@@ -1,0 +1,11 @@
+use mysql;
+select user, host from user;
+create user 'sampleUser'@'localhost' identified by '1234';
+create user 'sampleUser'@'%' identified by '1234';
+show grants for 'sampleUser'@'localhost';
+show grants for 'sampleUser'@'%';
+grant all on world.* to 'sampleUser'@'localhost';
+grant select on world.city to 'sampleUser'@'localhost';
+grant update(CountryCode) on world.city to 'sampleUser'@'%';
+drop user 'sampleUser'@'localhost';
+drop user 'sampleUser'@'%';
