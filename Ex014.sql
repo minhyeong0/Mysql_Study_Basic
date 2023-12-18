@@ -1,0 +1,18 @@
+show databases;
+use information_schema;
+show tables;
+use world;
+show columns from city;
+show index from city;
+show variables like 'character_set_system';
+show variables like '%char%';
+show variables like '%engine%';
+show engines;
+alter database world character set utf8 collate utf8_general_ci;
+alter table city character set utf8 collate utf8_general_ci;
+create database sampleTestDB default character set utf8 collate utf8_general_ci;
+use sampleTestDB;
+SELECT engine, support FROM information_schema.engines where support='DEFAULT';
+SET default_storage_engine = MyISAM;
+show variables like '%storage_engine%';
+drop database sampleTestDB;
