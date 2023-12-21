@@ -1,0 +1,30 @@
+select @@autocommit;
+set autocommit = false;
+create database sampleDB;
+use sampleDB;
+create table BusinessCard (Name varchar(255), Address varchar(255), Telephone varchar(255));
+insert into BusinessCard values ('Bob', 'Seocho-dong 123', '123-4567');
+select * from BusinessCard;
+commit;
+rollback;
+drop database sampleDB;
+use world;
+select engine, support from information_schema.engines where support = 'DEFAULT';
+set default_storage_engine = MyISAM;
+set default_storage_engine = InnoDB;
+select engine from information_schema.TABLES where table_name = 'city' and table_schema = 'world';
+alter table city engine = InnoDB;
+-- select @@tx_isolation;
+-- set tx_isolation = 'READ-COMMITED';
+select @@autocommit;
+set autocommit = false;
+create database sampleDB;
+create table BusinessCard (Name varchar(255), Address varchar(255), Telephone varchar(255));
+insert into BusinessCard values ('Bob', 'Seaul', '123-4567');
+commit;
+set autocommit = true;
+-- select @@tx_isolation;
+-- set tx_isolation = 'READ-COMMITTED';
+drop database sampleDB;
+
+
